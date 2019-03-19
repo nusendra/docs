@@ -240,9 +240,9 @@ Previously, `v-for="number in 10"` would have `number` starting at 0 and ending 
 
 ## Props
 
-### `coerce` Prop Option <sup>removed</sup>
+### Opsi prop `coerce` <sup>dihapus</sup>
 
-If you want to coerce a prop, setup a local computed value based on it instead. For example, instead of:
+Jika Anda ingin membuat *prop* bisa berubah secara reaktif, Anda bisa menggunakan *computed properties*. Sebagai contoh nya, daripada menggunakan ini:
 
 ``` js
 props: {
@@ -257,7 +257,7 @@ props: {
 }
 ```
 
-You could write:
+Anda sebaiknya menulis seperti dibawah ini:
 
 ``` js
 props: {
@@ -272,30 +272,30 @@ computed: {
 }
 ```
 
-There are a few advantages:
+Ada beberapa keuntungan:
 
-- You still have access to the original value of the prop.
-- You are forced to be more explicit, by giving your coerced value a name that differentiates it from the value passed in the prop.
+- Anda masih bisa mengakses nilai asli dari suatu *prop*.
+- Anda akan dipaksa untuk jadi lebih eksplisit, dengan membuat nama *coerce* Anda berbeda dari nilai yang dioper ke dalam *prop*.
 
 {% raw %}
 <div class="upgrade-path">
-  <h4>Upgrade Path</h4>
-  <p>Run the <a href="https://github.com/vuejs/vue-migration-helper">migration helper</a> on your codebase to find examples of the <code>coerce</code> option.</p>
+  <h4>Alur Peningkatan</h4>
+  <p>Jalankan <a href="https://github.com/vuejs/vue-migration-helper">bantuan migrasi</a> di basis kode Anda untuk mencari contoh dari opsi <code>coerce</code>.</p>
 </div>
 {% endraw %}
 
-### `twoWay` Prop Option <sup>removed</sup>
+### Opsi Prop `twoWay` <sup>dihapus</sup>
 
-Props are now always one-way down. To produce side effects in the parent scope, a component needs to explicitly emit an event instead of relying on implicit binding. For more information, see:
+*Props* sekarang akan selalu satu arah kebawah. Untuk menghasilkan efek samping disisi komponen induk, sebuah komponen perlu untuk secara eksplisit meng*emit* sebuah *event* daripada harus bergantung pada opsi *binding* yang implisit. Untuk informasi lebih lanjut, silakan baca:
 
-- [Custom component events](components.html#Custom-Events)
-- [Custom input components](components.html#Form-Input-Components-using-Custom-Events) (using component events)
-- [Global state management](state-management.html)
+- [*Event* komponen kustom](components.html#Custom-Events)
+- [Komponen input kustom](components.html#Form-Input-Components-using-Custom-Events) (menggunakan komponen *event*)
+- [Pengelolaan *state* secara global](state-management.html)
 
 {% raw %}
 <div class="upgrade-path">
-  <h4>Upgrade Path</h4>
-  <p>Run the <a href="https://github.com/vuejs/vue-migration-helper">migration helper</a> on your codebase to find examples of the <code>twoWay</code> option.</p>
+  <h4>Alur Peningkatan</h4>
+  <p>Jalankan <a href="https://github.com/vuejs/vue-migration-helper">bantuan migrasi</a> di basis kode Anda untuk mencari contoh dari opsi <code>twoWay</code>.</p>
 </div>
 {% endraw %}
 
